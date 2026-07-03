@@ -16,15 +16,6 @@ public sealed class CharSequenceGenerator : SequenceGenerator<char>
     public CharSequenceGenerator(char previous, char current)
         : base(previous, current)
     {
-        if (previous < FirstLetter || previous > 'Z')
-        {
-            throw new ArgumentOutOfRangeException(nameof(previous), "Value must be an uppercase letter A-Z.");
-        }
-
-        if (current < FirstLetter || current > 'Z')
-        {
-            throw new ArgumentOutOfRangeException(nameof(current), "Value must be an uppercase letter A-Z.");
-        }
     }
 
     /// <inheritdoc/>
