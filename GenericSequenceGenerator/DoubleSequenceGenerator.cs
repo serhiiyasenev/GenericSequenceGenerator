@@ -16,5 +16,13 @@ public sealed class DoubleSequenceGenerator : SequenceGenerator<double>
     }
 
     /// <inheritdoc/>
-    protected override double GetNext() => this.Current + (this.Previous / this.Current);
+    protected override double GetNext()
+    {
+        if (this.Current == 0d)
+        {
+            throw new DivideByZeroException("Current value must be non-zero to compute the next value.");
+        }
+
+        return this.Current + (this.Previous / this.Current);
+    }
 }
