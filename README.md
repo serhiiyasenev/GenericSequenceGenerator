@@ -1,10 +1,8 @@
 # Generic Sequence Generators
 
-A intermediate level task for practicing object-oriented programming.
+An intermediate-level task for practicing object-oriented programming.
 
-Estimated time to complete the task: 2 hour.
-
-The task requires .NET 8 SDK installed.
+The task requires .NET 8 SDK to be installed.
 
 ## Task Description
 
@@ -21,7 +19,7 @@ Implement a class library of generators of sequences of elements of various type
 ### 2. Generic Sequence Generator Class
 
 - Create an abstract class `SequenceGenerator<T>` that implements the `ISequenceGenerator<T>` interface.
-- Provide a constructor that initializes two first values of the sequence.
+- Provide a constructor that initializes the first two values of the sequence.
 - Implement the properties `Previous` and `Current` with appropriate accessors.
 - Define a public property `Count`, representing the number of elements generated in the sequence. The property should have a public getter and a private setter.
 - Define an abstract method called `GetNext()` that returns an element of type `T` of the specific sequence.
@@ -29,22 +27,22 @@ Implement a class library of generators of sequences of elements of various type
 ### 3. Fibonacci Sequence Generator Class
 
 - Create a class called `FibonacciSequenceGenerator` that inherits from `SequenceGenerator<int>`.
-- Provide a constructor that initializes two first values of the sequence.
+- Provide a constructor that initializes the first two values of the sequence.
 - Implement the `GetNext()` method to generate the next Fibonacci number based on the previous and current values. The Fibonacci sequence starts with two initial values (e.g., 0 and 1), and each subsequent number is the sum of the previous two.
 
 ### 4. Integer Sequence Generator Class
 - Create a class called `IntegerSequenceGenerator` that inherits from `SequenceGenerator<int>`.
-- Provide a constructor that initializes two first values of the sequence.
-- Implement the `GetNext()` method to generate the elements of the sequence based the following rule:
+- Provide a constructor that initializes the first two values of the sequence.
+- Implement the `GetNext()` method to generate the elements of the sequence based on the following rule:
 
   $`x_1 = 1, x_2 = 2, x_{n + 1} = 6 x_n - 8 x_{n - 1}, n = 2, 3, ... ,`$.
 
-Data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }, ,` n = 10`
+Data for tests: { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 }, n = 10`
 
 ### 5. Double Sequence Generator Class
 - Create a class called `DoubleSequenceGenerator` that inherits from `SequenceGenerator<int>`.
-- Provide a constructor that initializes two first values of the sequence.
-- Implement the `GetNext()` method to generate the elements of the sequence based the following rule:
+- Provide a constructor that initializes the first two values of the sequence.
+- Implement the `GetNext()` method to generate the elements of the sequence based on the following rule:
 
   $`x_1 = 1, x_2 = 2, x_{n + 1} = x_n +  x_{n - 1} / x_{n}, n = 2, 3, ...,`$.
 
@@ -52,8 +50,8 @@ Data for tests: {1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.703898344
 
 ### 6. Char Sequence Generator Class
 - Create a class called `CharSequenceGenerator` that inherits from `SequenceGenerator<int>`.
-- Provide a constructor that initializes two first values of the sequence.
-- Implement the `GetNext()` method to generate the elements of the sequence based the following rule:
+- Provide a constructor that initializes the first two values of the sequence.
+- Implement the `GetNext()` method to generate the elements of the sequence based on the following rule:
 
   $`x_1 = a, x_2 = b, x_{n + 1} = (x_n +  x_{n - 1}) % 26 + 'A', n = 2, 3, ...,`$ where `a, b` - `char`.
 
